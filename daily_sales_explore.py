@@ -25,6 +25,6 @@ pink_morsel["sales"] = pink_morsel.price * pink_morsel.quantity
 cols = ["sales", "date", "region"]
 daily_sales_conv = pink_morsel[cols].copy()
 # Save as csv file
-daily_sales_conv.to_csv('daily_sales_conv.csv', index=False)
+daily_sales_conv.to_csv('data/daily_sales_conv.csv', index=False)
 
 
