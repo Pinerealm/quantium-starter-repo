@@ -55,9 +55,11 @@ app.layout = html.Div([
 )
 def update_graph(region):
     filtered_df = df[df['region'] == region] if region != 'all' else df
+    title = f"{region.capitalize()} Region" if region != 'all' else 'All Regions'
 
     fig = px.line(filtered_df, x="date", y="sales", labels=labels)
-    fig.update_layout(annotations=[annotation_dict])
+    fig.update_layout(annotations=[annotation_dict], title=title, title_x=0.5,
+                      title_font_size=20)
     return fig
 
 
