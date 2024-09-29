@@ -33,7 +33,7 @@ app.layout = html.Div([
 
     dcc.Graph(id='pink-morsel-graph'),
     # Add a radio button with options to select the region
-    html.Label('Select Region', style={'fontWeight': 'bold', 'fontSize': 20}),
+    html.Label('Select Region', style={'fontWeight': 'bold', 'fontSize': 18}),
     dcc.RadioItems(
         id='region-radio',
         options=[
@@ -46,7 +46,7 @@ app.layout = html.Div([
         value='all',
         labelStyle={'display': 'inline'}
     )
-])
+], style={'width': '90%', 'margin': 'auto', 'backgroundColor': '#f9f9f9'})
 
 # Add a callback to update the graph based on the selected region
 @callback(
