@@ -25,19 +25,13 @@ annotation_dict = dict(
     ax=-70,
     ay=-40,
 )
-fig = px.line(df, x="date", y="sales", line_group='region', labels=labels)
-# Add an annotation marking the 15th of January 2021
-fig.update_layout(annotations=[annotation_dict])
 
 # Update the layout of the app
 app.layout = html.Div([
     # Add a title
     html.H1('Pink Morsel Sales', style={'textAlign': "center"}),
 
-    dcc.Graph(
-        id='pink-morsel-graph',
-        figure=fig
-    ),
+    dcc.Graph(id='pink-morsel-graph'),
     # Add a radio button with options to select the region
     html.Label('Select Region', style={'fontWeight': 'bold', 'fontSize': 20}),
     dcc.RadioItems(
