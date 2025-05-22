@@ -4,7 +4,7 @@
 source venv/bin/activate
 
 # Run the test suite
-python test_app.py
+python -m pytest test_app.py --disable-warnings
 RESULT=$?
 
 # Return 0 if tests passed, 1 otherwise
